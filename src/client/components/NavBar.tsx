@@ -39,6 +39,14 @@ const Navbar: React.FC = () => {
               Home
             </Link>
 
+            <Link 
+              to="/showcase" 
+              className={`navbar-item showcase-link ${isActive('/showcase') ? 'active' : ''}`}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Showcase
+            </Link>
+
             {user?.isAdmin && (
               <>
                 <div className="navbar-divider"></div>
