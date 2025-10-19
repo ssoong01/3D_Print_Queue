@@ -6,6 +6,7 @@ import RequestForm from './components/RequestForm';
 import Auth from './components/Auth';
 import VerifyEmail from './components/VerifyEmail';
 import AdminPanel from './components/Admin/AdminPanel';
+import Showcase from './components/Showcase';
 import { UserProvider, useUser } from './context/UserContext';
 import './styles/base.css';
 import './styles/variables.css';
@@ -47,6 +48,7 @@ const App: React.FC = () => {
               <Route path="/login" element={<Auth />} />
               <Route path="/verify-email" element={<VerifyEmail />} />
               <Route path="/admin" element={<AdminRoute><AdminPanel /></AdminRoute>} />
+              <Route path="/showcase" element={<Showcase />} />
             </Routes>
           </main>
         </div>

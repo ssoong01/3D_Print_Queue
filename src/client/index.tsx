@@ -14,6 +14,7 @@ import './styles/components/Admin.css';
 import './styles/components/UserManagement.css';
 import './styles/components/ServerSettings.css';
 import './styles/components/AccessLogs.css';
+import './styles/components/Showcase.css';
 import './styles/responsive.css';
 
 const root = ReactDOM.createRoot(
