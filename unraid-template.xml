@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>3D-Print-Queue</Name>
+  <Repository>ssoong01/3d-print-queue:latest</Repository>
+  <Registry>https://hub.docker.com/r/ssoong01/3d-print-queue</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/yourusername/3d-print-queue/issues</Support>
+  <Project>https://github.com/yourusername/3d-print-queue</Project>
+  <Overview>A comprehensive web application for managing 3D print requests with user authentication, showcase gallery, and admin panel.&#xD;
+&#xD;
+Features:&#xD;
+- Queue management with drag-and-drop reordering&#xD;
+- User authentication with email verification&#xD;
+- Showcase gallery for sharing prints&#xD;
+- Email notifications&#xD;
+- Admin panel with user management&#xD;
+- Access logs and IP management&#xD;
+&#xD;
+IMPORTANT: After first start, access the web UI and register an admin account using the ADMIN_PASSWORD you set.</Overview>
+  <Category>Productivity: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/yourusername/3d-print-queue/main/unraid-template.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/yourusername/3d-print-queue/main/icon.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled></DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>MongoDB container - will be automatically created as a dependency</Requires>
+  <Config Name="Web UI Port" Target="8080" Default="8080" Mode="tcp" Description="Port for accessing the web interface" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="API Port" Target="3000" Default="3000" Mode="tcp" Description="Port for the API server (internal use)" Type="Port" Display="advanced" Required="true" Mask="false">3000</Config>
+  <Config Name="Uploads Directory" Target="/app/uploads" Default="/mnt/user/appdata/3d-print-queue/uploads" Mode="rw" Description="Directory where uploaded showcase images are stored" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/3d-print-queue/uploads</Config>
+  <Config Name="JWT Secret" Target="JWT_SECRET" Default="" Mode="" Description="REQUIRED: Secret key for JWT tokens. Generate a random string (e.g., use: openssl rand -hex 32)" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Admin Password" Target="ADMIN_PASSWORD" Default="admin" Mode="" Description="Password required to register as admin. CHANGE THIS from default!" Type="Variable" Display="always" Required="true" Mask="true">admin</Config>
+  <Config Name="MongoDB Host" Target="MONGODB_HOST" Default="mongodb" Mode="" Description="Hostname of MongoDB container" Type="Variable" Display="advanced" Required="true" Mask="false">mongodb</Config>
+  <Config Name="MongoDB Port" Target="MONGODB_PORT" Default="27017" Mode="" Description="MongoDB port" Type="Variable" Display="advanced" Required="false" Mask="false">27017</Config>
+  <Config Name="MongoDB Database" Target="MONGODB_DATABASE" Default="print-queue" Mode="" Description="MongoDB database name" Type="Variable" Display="advanced" Required="false" Mask="false">print-queue</Config>
+  <Config Name="Node Environment" Target="NODE_ENV" Default="production" Mode="" Description="Node.js environment (leave as production)" Type="Variable" Display="advanced" Required="false" Mask="false">production</Config>
+</Container>
