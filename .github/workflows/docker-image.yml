@@ -8,7 +8,7 @@ on:
 
 env:
   REGISTRY: docker.io
-  IMAGE_NAME: yourusername/3d-print-queue
+  IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}/3d-print-queue
 
 jobs:
   build-and-push:
