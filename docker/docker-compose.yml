@@ -1,6 +1,8 @@
 services:
   app:
-    build: .
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
     ports:
       - "${API_PORT:-3000}:3000"
       - "${WEB_PORT:-8080}:8080"
@@ -15,9 +17,7 @@ services:
       - WEB_PORT=8080
       - UPLOADS_DIR=/app/uploads
     volumes:
-      # Bind mount for uploads - configurable via UPLOADS_HOST_DIR
-      # Default: ./uploads in project directory
-      - ${UPLOADS_HOST_DIR:-./uploads}:/app/uploads
+      - ${UPLOADS_HOST_DIR:-../uploads}:/app/uploads
     depends_on:
       - db
     restart: unless-stopped

@@ -1,8 +1,8 @@
-version: '1.0'
+version: '3.8'
 
 services:
   app:
-    image: ssoong01/3d-print-queue:latest  # Change to your Docker Hub username
+    image: ssoong01/3d-print-queue:latest
     container_name: 3d-print-queue-app
     ports:
       - "${API_PORT:-3000}:3000"
@@ -18,7 +18,7 @@ services:
       - WEB_PORT=8080
       - UPLOADS_DIR=/app/uploads
     volumes:
-      - ${UPLOADS_HOST_DIR:-./uploads}:/app/uploads
+      - ${UPLOADS_HOST_DIR:-../uploads}:/app/uploads
     depends_on:
       - db
     restart: unless-stopped
