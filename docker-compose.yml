@@ -13,6 +13,11 @@ services:
       - MONGODB_DATABASE=print-queue
       - API_PORT=3000
       - WEB_PORT=8080
+      - UPLOADS_DIR=/app/uploads
+    volumes:
+      # Bind mount for uploads - configurable via UPLOADS_HOST_DIR
+      # Default: ./uploads in project directory
+      - ${UPLOADS_HOST_DIR:-./uploads}:/app/uploads
     depends_on:
       - db
     restart: unless-stopped
