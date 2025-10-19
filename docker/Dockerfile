@@ -24,6 +24,22 @@ RUN npm run build
 # Production stage
 FROM node:20-alpine
 
+# Add labels for Docker Hub and Unraid
+LABEL org.opencontainers.image.title="3D Print Queue"
+LABEL org.opencontainers.image.description="A comprehensive web application for managing 3D print requests with user authentication, showcase gallery, and admin panel"
+LABEL org.opencontainers.image.authors="ssoong01"
+LABEL org.opencontainers.image.url="https://github.com/ssoong01/3d-print-queue"
+LABEL org.opencontainers.image.documentation="https://github.com/ssoong01/3d-print-queue/blob/main/README.md"
+LABEL org.opencontainers.image.source="https://github.com/ssoong01/3d-print-queue"
+LABEL org.opencontainers.image.licenses="MIT"
+LABEL org.opencontainers.image.vendor="ssoong01"
+
+# Unraid-specific labels
+LABEL net.unraid.docker.managed="true"
+LABEL net.unraid.docker.webui="http://[IP]:[PORT:8080]"
+LABEL net.unraid.docker.icon="https://raw.githubusercontent.com/ssoong01/3d-print-queue/main/templates/icon.png"
+LABEL net.unraid.docker.template="https://raw.githubusercontent.com/ssoong01/3d-print-queue/main/templates/unraid-template.xml"
+
 WORKDIR /app
 
 # Copy package files
