@@ -1,6 +1,7 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -29,6 +30,13 @@ export default {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif|svg|ico)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: '[name][ext]'
+        }
       }
     ],
   },
@@ -38,7 +46,19 @@ export default {
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
-      inject: 'body'
+      inject: 'body',
+      favicon: './public/favicon.png'
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: 'public',
+          to: '',
+          globOptions: {
+            ignore: ['**/index.html']
+          }
+        }
+      ]
     })
   ],
   devServer: {
@@ -50,7 +70,7 @@ export default {
     hot: true,
     open: true,
     proxy: [{
-      context: ['/api', '/uploads'],  // Added /uploads to proxy
+      context: ['/api', '/uploads'],
       target: `http://localhost:${API_PORT}`,
       secure: false,
       changeOrigin: true

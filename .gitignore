@@ -39,6 +39,8 @@ coverage/
 *.tmp
 *.temp
 
-# Lock files (choose one: npm or yarn)
-# package-lock.json
-# yarn.lock
+# Don't ignore public assets
+!public/favicon*.png
+!public/favicon.ico
+!public/*.png
+!public/manifest.json
