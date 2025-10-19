@@ -14,7 +14,7 @@ COPY webpack.config.js ./
 # Install ALL dependencies (including dev dependencies for building)
 RUN npm ci
 
-# Copy source code
+# Copy source code and assets (favicon.png should already be in public/)
 COPY src ./src
 COPY public ./public
 
