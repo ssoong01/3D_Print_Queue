@@ -1,0 +1,446 @@
+/* Ultra-wide screens - add more spacing */
+@media (min-width: 1920px) {
+  .queue-container {
+    gap: 3rem;
+    padding: 0 3rem;
+  }
+  
+  .navbar {
+    padding: 1rem 3rem;
+  }
+  
+  .main-content {
+    padding: 2rem 3rem;
+  }
+}
+
+/* Large tablets and smaller desktops */
+@media (max-width: 1200px) {
+  .queue-container {
+    gap: 1.5rem;
+  }
+  
+  .current-queue {
+    flex: 6;
+  }
+  
+  .completed-queue {
+    flex: 4;
+  }
+  
+  /* Keep items on same line for large tablets */
+  .print-info-top {
+    gap: 0.6rem;
+  }
+  
+  .print-details h3 {
+    font-size: 1.05rem;
+  }
+  
+  .requester,
+  .model-url a {
+    font-size: 0.85rem;
+  }
+}
+
+/* Tablets - keep horizontal layout */
+@media (max-width: 992px) {
+  .queue-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .current-queue,
+  .completed-queue {
+    flex: 1;
+    width: 100%;
+  }
+  
+  .print-item {
+    flex-wrap: wrap;
+  }
+  
+  .priority-number {
+    min-width: 30px;
+    font-size: 1.2rem;
+  }
+  
+  /* Keep info on same line */
+  .print-info-top {
+    gap: 0.5rem;
+  }
+  
+  .print-details h3 {
+    font-size: 1rem;
+  }
+  
+  .requester,
+  .model-url a {
+    font-size: 0.8rem;
+  }
+  
+  /* Reduce separator spacing */
+  .requester::before,
+  .model-url::before {
+    margin: 0 0.4rem;
+  }
+}
+
+/* Small tablets - still keep horizontal */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+  
+  .main-content {
+    padding: 1rem;
+  }
+  
+  .queue-container {
+    padding: 0 0.5rem;
+  }
+  
+  .print-queue {
+    padding: 1rem;
+  }
+  
+  .queue-header {
+    gap: 1rem;
+  }
+  
+  .print-item {
+    padding: 0.9rem;
+    gap: 0.9rem;
+  }
+  
+  /* Tighter spacing but still horizontal */
+  .print-info-top {
+    gap: 0.4rem;
+  }
+  
+  .print-details h3 {
+    font-size: 0.95rem;
+  }
+  
+  .requester,
+  .model-url a {
+    font-size: 0.75rem;
+  }
+  
+  .requester::before,
+  .model-url::before {
+    margin: 0 0.3rem;
+  }
+}
+
+/* Mobile landscape and small tablets - NOW stack vertically */
+@media (max-width: 640px) {
+  .queue-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .queue-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .add-request-btn {
+    width: 100%;
+  }
+  
+  .print-item {
+    padding: 0.8rem;
+    gap: 0.8rem;
+  }
+  
+  .print-info-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .print-info-top h3 {
+    font-size: 1rem;
+  }
+  
+  .requester,
+  .model-url a {
+    font-size: 0.8rem;
+  }
+  
+  .requester::before,
+  .model-url::before {
+    content: "";
+    margin: 0;
+  }
+  
+  .print-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  
+  .delete-btn {
+    width: 100%;
+  }
+  
+  .modal-content {
+    width: 95%;
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .modal-header h2 {
+    font-size: 1.3rem;
+  }
+  
+  .modal-actions {
+    flex-direction: column;
+  }
+  
+  .modal-actions button {
+    width: 100%;
+  }
+  
+  /* Completed items on mobile */
+  .completed-line-1 {
+    flex-wrap: wrap;
+  }
+  
+  .completed-line-1-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+    width: 100%;
+  }
+  
+  .requester-completed::before {
+    content: "";
+    margin: 0;
+  }
+  
+  .completed-line-2 {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+  
+  .view-details-btn {
+    font-size: 0.85rem;
+  }
+  
+  .detail-row {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  
+  .detail-label {
+    min-width: auto;
+  }
+}
+
+/* Mobile portrait */
+@media (max-width: 480px) {
+  .print-queue {
+    padding: 0.5rem;
+  }
+  
+  .queue-header h2 {
+    font-size: 1.3rem;
+  }
+  
+  .print-item {
+    padding: 0.6rem;
+    gap: 0.6rem;
+    flex-direction: column;
+  }
+  
+  .priority-number {
+    position: absolute;
+    top: 0.6rem;
+    left: 0.6rem;
+    font-size: 1rem;
+    min-width: 24px;
+  }
+  
+  .print-details {
+    width: 100%;
+    padding-left: 2rem;
+  }
+  
+  .print-info-top h3 {
+    font-size: 0.95rem;
+  }
+  
+  .requester,
+  .model-url a {
+    font-size: 0.8rem;
+  }
+  
+  .status,
+  .status-select {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+  }
+  
+  .notes {
+    font-size: 0.85rem;
+  }
+  
+  .print-meta {
+    font-size: 0.8rem;
+  }
+  
+  .delete-btn {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+  }
+  
+  .completed-item {
+    padding: 0.5rem;
+  }
+  
+  .completed-line-1 h4 {
+    font-size: 0.9rem;
+  }
+  
+  .requester-completed {
+    font-size: 0.7rem;
+  }
+  
+  .completed-right time {
+    font-size: 0.7rem;
+  }
+  
+  .modal-content {
+    padding: 1rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    font-size: 0.85rem;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+}
+
+/* Very small mobile devices */
+@media (max-width: 360px) {
+  .queue-container {
+    padding: 0 0.25rem;
+  }
+  
+  .print-queue {
+    padding: 0.25rem;
+  }
+  
+  .queue-header {
+    margin-bottom: 1rem;
+  }
+  
+  .queue-header h2 {
+    font-size: 1.1rem;
+  }
+  
+  .add-request-btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  .print-item {
+    padding: 0.5rem;
+  }
+  
+  .priority-number {
+    font-size: 0.9rem;
+  }
+  
+  .print-details {
+    padding-left: 1.8rem;
+  }
+  
+  .completed-item {
+    padding: 0.4rem;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  button,
+  .view-details-btn,
+  .delete-btn,
+  .delete-btn-small {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  .status-select {
+    min-height: 44px;
+    padding: 0.5rem 2rem 0.5rem 0.8rem;
+    font-size: 0.85rem;
+  }
+  
+  .model-url a {
+    padding: 0.3rem 0;
+  }
+}
+
+/* Print styles */
+@media print {
+  .add-request-btn,
+  .delete-btn,
+  .delete-btn-small,
+  .status-select,
+  .view-details-btn {
+    display: none;
+  }
+  
+  .print-item {
+    break-inside: avoid;
+  }
+  
+  .queue-container {
+    display: block;
+  }
+  
+  .current-queue,
+  .completed-queue {
+    page-break-inside: avoid;
+  }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .print-item:hover {
+    transform: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .print-item {
+    border: 2px solid var(--text-primary);
+  }
+  
+  .status {
+    border: 2px solid currentColor;
+  }
+  
+  button {
+    border: 2px solid currentColor;
+  }
+}

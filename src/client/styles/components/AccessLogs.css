@@ -1,0 +1,312 @@
+.access-logs h2 {
+  margin: 0 0 1.25rem 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Banned IPs Section */
+.banned-ips-section,
+.logs-section {
+  margin-bottom: 2rem;
+}
+
+.banned-ips-section h3,
+.logs-section h3 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.ban-ip-form {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.ban-ip-form input {
+  flex: 1;
+  padding: 0.6rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 0.85rem;
+}
+
+.no-data {
+  text-align: center;
+  padding: 1.5rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* Banned IPs Table */
+.banned-ips-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+}
+
+.banned-ips-table th {
+  background: rgba(14, 165, 233, 0.1);
+  color: var(--text-primary);
+  font-weight: 600;
+  text-align: left;
+  padding: 0.65rem 0.75rem;
+  border-bottom: 2px solid var(--glass-border);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.banned-ips-table td {
+  padding: 0.65rem 0.75rem;
+  border-bottom: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.banned-ips-table tr:hover {
+  background: rgba(14, 165, 233, 0.05);
+}
+
+/* Access Logs Section */
+.logs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.filter-controls select {
+  padding: 0.4rem 0.8rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.logs-table-container {
+  overflow-x: auto;
+  margin-bottom: 0.75rem;
+}
+
+.logs-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  table-layout: auto; /* Dynamic column widths */
+}
+
+.logs-table th {
+  background: rgba(14, 165, 233, 0.1);
+  color: var(--text-primary);
+  font-weight: 600;
+  text-align: left;
+  padding: 0.5rem 0.4rem;
+  border-bottom: 2px solid var(--glass-border);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.logs-table td {
+  padding: 0.5rem 0.4rem;
+  border-bottom: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  vertical-align: middle;
+}
+
+/* Column-specific styling with minimal padding adjustments */
+.logs-table th:nth-child(1),
+.logs-table td:nth-child(1) {
+  white-space: nowrap;
+  font-size: 0.7rem;
+  padding-right: 0.6rem;
+}
+
+.logs-table th:nth-child(2),
+.logs-table td:nth-child(2) {
+  white-space: nowrap;
+  font-size: 0.75rem;
+  padding-right: 0.6rem;
+}
+
+.logs-table th:nth-child(3),
+.logs-table td:nth-child(3) {
+  white-space: nowrap;
+  text-align: center;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+}
+
+.logs-table th:nth-child(4),
+.logs-table td:nth-child(4) {
+  max-width: 400px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+}
+
+.logs-table th:nth-child(5),
+.logs-table td:nth-child(5) {
+  white-space: nowrap;
+  text-align: center;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+}
+
+.logs-table th:nth-child(6),
+.logs-table td:nth-child(6) {
+  white-space: nowrap;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+}
+
+.logs-table th:nth-child(7),
+.logs-table td:nth-child(7) {
+  white-space: nowrap;
+  padding-left: 0.6rem;
+}
+
+.logs-table tr:hover {
+  background: rgba(14, 165, 233, 0.12);
+}
+
+.logs-table code {
+  background: rgba(14, 165, 233, 0.1);
+  padding: 0.2rem 0.4rem;
+  border-radius: var(--radius-sm);
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* Method Badges */
+.method {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.method-get {
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--success);
+}
+
+.method-post {
+  background: rgba(14, 165, 233, 0.2);
+  color: var(--accent-primary);
+}
+
+.method-patch,
+.method-put {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+}
+
+.method-delete {
+  background: rgba(239, 68, 68, 0.2);
+  color: var(--danger);
+}
+
+/* Status Badges */
+.status {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 0.7rem;
+  white-space: nowrap;
+}
+
+.status-success {
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--success);
+}
+
+.status-warning {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+}
+
+.status-error {
+  background: rgba(239, 68, 68, 0.2);
+  color: var(--danger);
+}
+
+.status-info {
+  background: rgba(14, 165, 233, 0.2);
+  color: var(--accent-primary);
+}
+
+.anonymous {
+  color: var(--text-tertiary);
+  font-style: italic;
+  font-size: 0.75rem;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.pagination span {
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .logs-table-container {
+    overflow-x: scroll;
+  }
+}
+
+@media (max-width: 768px) {
+  .users-table,
+  .logs-table,
+  .banned-ips-table {
+    font-size: 0.75rem;
+  }
+
+  .users-table th,
+  .logs-table th,
+  .banned-ips-table th,
+  .users-table td,
+  .logs-table td,
+  .banned-ips-table td {
+    padding: 0.5rem 0.3rem;
+  }
+
+  .ban-ip-form {
+    flex-direction: column;
+  }
+
+  .pagination {
+    flex-wrap: wrap;
+  }
+}
