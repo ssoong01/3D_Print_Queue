@@ -50,7 +50,7 @@ export default {
     hot: true,
     open: true,
     proxy: [{
-      context: ['/api'],
+      context: ['/api', '/uploads'],  // Added /uploads to proxy
       target: `http://localhost:${API_PORT}`,
       secure: false,
       changeOrigin: true
