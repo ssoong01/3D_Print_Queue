@@ -1,8 +1,8 @@
-version: '3.8'
+version: '1.0'
 
 services:
   app:
-    image: yourusername/3d-print-queue:latest  # Change to your Docker Hub username
+    image: ssoong01/3d-print-queue:latest  # Change to your Docker Hub username
     container_name: 3d-print-queue-app
     ports:
       - "${API_PORT:-3000}:3000"
